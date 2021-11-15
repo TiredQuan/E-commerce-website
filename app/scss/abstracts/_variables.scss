@@ -1,0 +1,32 @@
+@use "sass:meta";
+@import 'functions';
+// font-family: 'Nunito Sans', sans-serif;
+// font-family: 'Playfair Display', serif;
+// font-family: 'Roboto Mono', monospace;
+
+$black:#111111;
+$white:#ffffff;
+$blue-hover:#012169;
+
+$font-weights:(
+    'regular':400,
+    'semi-bold':600
+);
+$font-size:(
+    'product-price':rem(12),
+    'product-name':rem(14),
+    'paragrath':rem(16),
+    'lyon-heading1':rem(20),
+    'lyon-heading2':rem(18),
+    'lyon-heading3':rem(36),
+    'heading-small':rem(32),
+    'heading':rem(48),
+    'hero':rem(40),
+    'gift-away':rem(154)
+);
+
+:root{
+    --black:#{meta.inspect($black)};
+    --white:#{meta.inspect($white)};
+    --blue-hover:#{meta.inspect($blue-hover)};
+}
