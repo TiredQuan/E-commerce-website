@@ -37,7 +37,51 @@
         &--menu{
             color: gray;
         }
+        &--bar{
+            display: none;
+            ul{
+                display: flex;
+                li{
+                    margin: 0 rem(10);
+                    a{
+                        color: var(--black);
+                        font-size: map-get($font-size, product-price );
+                        font-weight: map-get($font-weights, semi-bold );
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
     }
+    &__mobile{
+        width: 100%;
+        height: rem(750);
+        background: var(--white);
+        transform: translateX(-100vw);
+        transition: 0.5s ease;
+        position: absolute;
+    }
+    &__hero{
+        width: 100%;
+        height: rem(500);
+        background: var(--black);
+    }
+    @media screen and(min-width:$desktop){
+        &__mobile{
+            display: none;
+        }
+        &__nav{
+            &--menu{
+                display: none;
+            }
+            &--bar{
+                display: block;
+            }
+        }
+    }
+}
+.show{
+    transform: translateX(0);
 }
 .header__nav--cart:hover i{
     font-size: rem(25);
