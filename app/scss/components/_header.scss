@@ -3,14 +3,23 @@
 
 .header{
     &__favorites-cta{
+        position: relative;
         width: 100%;
         height: rem(32);
         background-color: var(--black);
         color: var(--white);
         font-size: map-get($font-size, product-price );
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        line-height: rem(32);
+        text-align: center;
+        &--group{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        &--link{
+            float: right;
+            display: none;
+        }
         a{
             color: var(--white);
         }
@@ -52,6 +61,13 @@
                 }
             }
         }
+        &--desktop{
+            display: none;
+            color: var(--black);
+            font-size: map-get($font-size, product-price );
+            font-weight: map-get($font-weights, semi-bold );
+            text-transform: uppercase;
+        }
     }
     &__mobile{
         width: 100%;
@@ -70,12 +86,23 @@
         &__mobile{
             display: none;
         }
+        &__hero{
+            height: rem(540);
+        }
         &__nav{
             &--menu{
                 display: none;
             }
             &--bar{
                 display: block;
+            }
+            &--desktop{
+                display: inline;
+            }
+        }
+        &__favorites-cta{
+            &--link{
+                display: inline;
             }
         }
     }
@@ -86,7 +113,7 @@
 .header__nav--cart:hover i{
     font-size: rem(25);
 }
-.header__favorites-cta a::after{
+.header__favorites-cta .header__favorites-cta-favorites:after{
     position: absolute;
     transform: translateX(rem(10));
     font-family: 'Font Awesome 5 Free';
@@ -94,6 +121,6 @@
     content: '\f061';
     transition: 0.5s ease;
 }
-.header__favorites-cta a:hover::after{
+.header__favorites-cta a:nth-child(1):hover::after{
     transform: translateX(rem(20));
 }
