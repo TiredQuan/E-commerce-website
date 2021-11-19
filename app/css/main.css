@@ -443,7 +443,11 @@ a {
 }
 .header__favorites-cta--link {
   float: right;
+  height: 25px;
   display: none;
+}
+.header__favorites-cta--link:before {
+  background-color: var(--white) !important;
 }
 .header__favorites-cta a {
   color: var(--white);

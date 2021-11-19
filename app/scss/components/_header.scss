@@ -18,7 +18,11 @@
         }
         &--link{
             float: right;
+            height: 25px;
             display: none;
+            &:before{
+                background-color: var(--white) !important;
+            }
         }
         a{
             color: var(--white);
