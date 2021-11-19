@@ -35,4 +35,24 @@ a:not(.logo){
     transform: scaleX(1);
     }
   
+}
+.shop-cta{
+    height: rem(56);
+    width: rem(325);
+    border: 1px solid var(--white);
+    background-color: transparent;
+    color: var(--white);
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: map-get($font-weights, semi-bold );
+}
+.shop-cta:hover{
+  background-color: var(--white);
+  color: var(--black);
+}
+@media screen and (min-width:$desktop) {
+  .shop-cta{
+    width: rem(294);
   }
+}

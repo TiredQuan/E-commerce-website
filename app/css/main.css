@@ -5,6 +5,16 @@
   --blue-hover:#012169;
 }
 
+.black-bg {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.white-bg {
+  color: var(--black);
+  background-color: var(--white);
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -494,7 +504,16 @@ a {
 .header__hero {
   width: 100%;
   height: 31.25rem;
-  background: var(--black);
+  text-align: center;
+}
+.header__hero div {
+  padding: 0 8vw 0.875rem 8vw;
+}
+.header__hero h1 {
+  font-size: 2.5rem;
+  line-height: 2.625rem;
+  padding-top: 15.625rem;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 62.5rem) {
   .header__mobile {
@@ -502,6 +521,16 @@ a {
   }
   .header__hero {
     height: 33.75rem;
+  }
+  .header__hero div {
+    padding: 0 0 0.875rem 0;
+  }
+  .header__hero div h1 {
+    padding-top: 10rem;
+  }
+  .header__hero div p {
+    padding-right: 35vw;
+    padding-left: 35vw;
   }
   .header__nav--menu {
     display: none;
@@ -538,6 +567,12 @@ a {
   transform: translateX(1.25rem);
 }
 
+#cart {
+  height: 1rem;
+  display: flex;
+  align-items: center;
+}
+
 a:not(.logo) {
   position: relative;
   transition: all 0.15s ease-out;
@@ -557,4 +592,27 @@ a:not(.logo):before {
 a:not(.logo):hover:before {
   visibility: visible;
   transform: scaleX(1);
+}
+
+.shop-cta {
+  height: 3.5rem;
+  width: 20.3125rem;
+  border: 1px solid var(--white);
+  background-color: transparent;
+  color: var(--white);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+}
+
+.shop-cta:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+@media screen and (min-width: 62.5rem) {
+  .shop-cta {
+    width: 18.375rem;
+  }
 }/*# sourceMappingURL=main.css.map */

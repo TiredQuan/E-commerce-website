@@ -80,7 +80,16 @@
     &__hero{
         width: 100%;
         height: rem(500);
-        background: var(--black);
+        text-align: center;
+        div{
+            padding: 0 8vw rem(14) 8vw;
+        }
+        h1{
+            font-size: rem(40);
+            line-height: rem(42);
+            padding-top: rem(250);
+            text-transform: uppercase;
+        }
     }
     @media screen and(min-width:$desktop){
         &__mobile{
@@ -88,6 +97,17 @@
         }
         &__hero{
             height: rem(540);
+            div{
+                
+                padding: 0 0 rem(14) 0;
+                h1{
+                    padding-top: rem(160);
+                }
+                p{
+                    padding-right: 35vw;
+                    padding-left: 35vw;
+                }
+            }
         }
         &__nav{
             &--menu{
@@ -123,4 +143,9 @@
 }
 .header__favorites-cta a:nth-child(1):hover::after{
     transform: translateX(rem(20));
+}
+#cart{
+    height: rem(16);
+    display: flex;
+    align-items: center;
 }

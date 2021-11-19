@@ -54,3 +54,12 @@ $font-size:(
     --white:#{meta.inspect($white)};
     --blue-hover:#{meta.inspect($blue-hover)};
 }
+
+.black-bg{
+    color: var(--white);
+    background-color: var(--black);
+}
+.white-bg{
+    color: var(--black);
+    background-color: var(--white);
+}
