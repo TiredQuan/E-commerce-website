@@ -80,6 +80,19 @@
         transform: translateX(-100vw);
         transition: 0.5s ease;
         position: absolute;
+        &--bar{
+            ul{
+                margin-left: rem(30);
+                li{
+                    margin-top: rem(30);
+                    a{
+                        color: var(--black);
+                        font-size: map-get($font-size, lyon-heading2);
+                        font-weight: map-get($font-weights, semi-bold );
+                    }
+                }
+            }
+        }
     }
     &__hero{
         width: 100%;

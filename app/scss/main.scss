@@ -14,7 +14,10 @@
 
 
 
-a:not(.logo){
+.header__nav--desktop{
+  height: rem(16);
+}
+.header__nav--bar--link, .header__favorites-cta--link,.header__nav--desktop {
     position: relative;
     transition: all 0.15s ease-out;
   
