@@ -80,18 +80,48 @@
         transform: translateX(-100vw);
         transition: 0.5s ease;
         position: absolute;
+        padding: 0 rem(30);
         &--bar{
             ul{
-                margin-left: rem(30);
                 li{
                     margin-top: rem(30);
                     a{
+                        &::after{
+                            content: '\f531';
+                            font-family: 'Font Awesome 5 Free';
+                            font-weight: 900;
+                            color: var(--black);
+                            margin-left: rem(10);
+                        }
+                        text-transform: uppercase;
                         color: var(--black);
                         font-size: map-get($font-size, lyon-heading2);
                         font-weight: map-get($font-weights, semi-bold );
                     }
                 }
             }
+        }
+        &--gift{
+            display: block;
+            text-transform: uppercase;
+            color: var(--black);
+            &--image{
+                width: rem(327);
+                height: rem(184);
+                background-color: var(--black);
+            }
+            p{
+                &::after{
+                    content: '\f531';
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    color: var(--black);
+                    margin-left: rem(10);
+                }
+            }
+        }
+        &--about{
+            text-transform: capitalize !important;
         }
     }
     &__hero{

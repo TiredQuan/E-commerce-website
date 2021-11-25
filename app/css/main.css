@@ -504,17 +504,43 @@ a {
   transform: translateX(-100vw);
   transition: 0.5s ease;
   position: absolute;
-}
-.header__mobile--bar ul {
-  margin-left: 1.875rem;
+  padding: 0 1.875rem;
 }
 .header__mobile--bar ul li {
   margin-top: 1.875rem;
 }
 .header__mobile--bar ul li a {
+  text-transform: uppercase;
   color: var(--black);
   font-size: 1.125rem;
   font-weight: 600;
+}
+.header__mobile--bar ul li a::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--black);
+  margin-left: 0.625rem;
+}
+.header__mobile--gift {
+  display: block;
+  text-transform: uppercase;
+  color: var(--black);
+}
+.header__mobile--gift--image {
+  width: 20.4375rem;
+  height: 11.5rem;
+  background-color: var(--black);
+}
+.header__mobile--gift p::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--black);
+  margin-left: 0.625rem;
+}
+.header__mobile--about {
+  text-transform: capitalize !important;
 }
 .header__hero {
   width: 100%;
