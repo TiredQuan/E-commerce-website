@@ -85,7 +85,7 @@
     }
 }
 .heading{
-    display: block;
+        display: block;
         height: rem(121);
         width: rem(250);
         text-align: center;
@@ -105,30 +105,32 @@
     &__grid{
         &--card{
             color: var(--black);
-            width: rem(327);
+            width: 87.200vw;
             position: relative;
             display: block;
             margin: 0 auto rem(50);
+            
             &--overflow{
                 overflow: hidden;
             }
             &--image{
                 width: 100%;
-                height: rem(328);
+                height: 87.467vw;
                 background: center/cover no-repeat;
                 transition: all 0.5s ease;
                 &-1{
-                    background-image: url(../../../images/icon/s1.png);
+                    background-image: url(../../images/tshirt--blue_3_11zon.jpg);
                 }
                 &-2{
-                    background-image: url(../../../images/icon/s2.png);
+                    background-image: url(../../images/tshirt--cyan_4_11zon.jpg);
                 }
                 &-3{
-                    background-image: url(../../../images/icon/s3.png);
+                    background-image: url(../../images/tshirt--magenta_5_11zon.jpg);
                 }
             }
             .arrow_head{
                 transition: all 0.5s ease;
+                margin: rem(20) 0;
             }
             &:hover &--image{
                 transform: scale(1.1);
@@ -136,6 +138,43 @@
             &:hover .arrow_head{
                 color: #012169;
             }
+        }
+    }
+    @media screen and (min-width:$desktop) {
+        &__grid{
+            display: grid;
+            width: fit-content;
+            margin: rem(45) auto 0;
+            grid-template-columns: repeat(3,rem(408));
+            grid-template-rows: rem(80) 1fr;
+            gap: 3.472vw;
+            grid-template-areas: 
+            "card1 season card2"
+            "card1 card3 card2";
+            justify-content: center;
+            &--card{
+                width: rem(408);
+                height: fit-content;
+                &:nth-child(1){
+                    grid-area: card1;
+                }
+                &:nth-child(2){
+                    grid-area: card2;
+                }
+                &:nth-child(3){
+                    grid-area: card3;
+                }
+                &--image{
+                    height: rem(409);
+                }
+            }
+        }
+        &__gifts{
+            .heading{
+                margin: 0 auto;
+
+            }
+            grid-area: season;
         }
     }
 }
