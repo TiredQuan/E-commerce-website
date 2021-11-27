@@ -145,7 +145,7 @@
             display: grid;
             width: fit-content;
             margin: rem(45) auto 0;
-            grid-template-columns: repeat(3,rem(408));
+            grid-template-columns: repeat(3,28.333vw);
             grid-template-rows: rem(80) 1fr;
             gap: 3.472vw;
             grid-template-areas: 
@@ -153,7 +153,7 @@
             "card1 card3 card2";
             justify-content: center;
             &--card{
-                width: rem(408);
+                width: 28.333vw;
                 height: fit-content;
                 &:nth-child(1){
                     grid-area: card1;
@@ -165,7 +165,7 @@
                     grid-area: card3;
                 }
                 &--image{
-                    height: rem(409);
+                    height: 28.403vw;
                 }
             }
         }
