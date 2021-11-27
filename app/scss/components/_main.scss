@@ -6,32 +6,20 @@
 }
 .favorites{
     position: relative;
-    &__few{
-        display: block;
-        height: rem(121);
-        width: rem(300);
-        text-align: center;
-        font-family: 'Playfair Display', serif;
-        font-style: italic;
-        line-height: 1.3;
-        margin: rem(45) auto 0;
-        font-size: map-get($font-size , lyon-heading1);
-        span{
-            font-size: map-get($font-size , heading);
-            font-style: normal;
-            font-family: 'Nunito Sans', sans-serif;
-            text-transform: uppercase;
-            }
-        }
     &__grid{
         display: grid;
         grid-template-columns: repeat(2,50%);
+        gap: rem(20) 0;
         &--card{
             position: relative;
+            &--scale{
+                overflow: hidden;
+            }
             &--image{
                 background: center/cover no-repeat;
                 height: 66.933vw;
                 width: 100%;
+                transition: all 0.5s ease;
                 &-1{
                     background-image: url(../../images/tshirt--blue_3_11zon.jpg);
                 }
@@ -45,9 +33,13 @@
                     background-image: url(../../images/tshirt--orange_6_11zon.jpg);
                 }
             }
+            &:hover > &--scale > &--image{
+                transform: scale(1.1);
+            }
             &--word{
                 width: 80%;
                 margin: rem(20) auto;
+                color: var(--black);
             }
             p{
                 margin: rem(8);
@@ -62,7 +54,7 @@
             }
         }
     }
-    @media  screen and (min-width:$desktop) {
+    @media screen and (min-width:$desktop) {
         width: 93.333vw;
         margin: auto;
         &__grid{
@@ -71,6 +63,78 @@
                 &--image{
                     height: rem(449);
                 }
+            }
+        }
+    }
+}
+#gift_away{
+    height: rem(80);
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    line-height: rem(80);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: map-get($font-weights, semi-bold );
+    font-size: rem(60);
+    @media screen and (min-width:$desktop) {
+        height: 10vw;
+        line-height: 10vw;
+        font-size: map-get($font-size, gift-away );
+        
+    }
+}
+.heading{
+    display: block;
+        height: rem(121);
+        width: rem(250);
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        line-height: 1.3;
+        margin: rem(45) auto 0;
+        font-size: map-get($font-size , lyon-heading1);
+        span{
+            font-size: map-get($font-size , heading);
+            font-style: normal;
+            font-family: 'Nunito Sans', sans-serif;
+            text-transform: uppercase;
+        }
+}
+.season{
+    &__grid{
+        &--card{
+            color: var(--black);
+            width: rem(327);
+            position: relative;
+            display: block;
+            margin: 0 auto rem(50);
+            &--overflow{
+                overflow: hidden;
+            }
+            &--image{
+                width: 100%;
+                height: rem(328);
+                background: center/cover no-repeat;
+                transition: all 0.5s ease;
+                &-1{
+                    background-image: url(../../../images/icon/s1.png);
+                }
+                &-2{
+                    background-image: url(../../../images/icon/s2.png);
+                }
+                &-3{
+                    background-image: url(../../../images/icon/s3.png);
+                }
+            }
+            .arrow_head{
+                transition: all 0.5s ease;
+            }
+            &:hover &--image{
+                transform: scale(1.1);
+            }
+            &:hover .arrow_head{
+                color: #012169;
             }
         }
     }

@@ -499,12 +499,15 @@ a {
 }
 .header__mobile {
   width: 100%;
-  height: 46.875rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background: var(--white);
   transform: translateX(-100vw);
   transition: 0.5s ease;
   position: absolute;
-  padding: 0 1.875rem;
+  padding: 0 1.875rem 1.875rem;
+  z-index: 5;
 }
 .header__mobile--bar ul li {
   margin-top: 1.875rem;
@@ -595,23 +598,151 @@ a {
   font-size: 1.5625rem;
 }
 
-.header__favorites-cta .header__favorites-cta-favorites:after {
-  position: absolute;
-  transform: translateX(0.625rem);
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "";
-  transition: 0.5s ease;
-}
-
-.header__favorites-cta a:nth-child(1):hover::after {
-  transform: translateX(1.25rem);
-}
-
 #cart {
   height: 1rem;
   display: flex;
   align-items: center;
+}
+
+.main {
+  width: 100%;
+  position: relative;
+}
+
+.favorites {
+  position: relative;
+}
+.favorites__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 1.25rem 0;
+}
+.favorites__grid--card {
+  position: relative;
+}
+.favorites__grid--card--scale {
+  overflow: hidden;
+}
+.favorites__grid--card--image {
+  background: center/cover no-repeat;
+  height: 66.933vw;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.favorites__grid--card--image-1 {
+  background-image: url(../../images/tshirt--blue_3_11zon.jpg);
+}
+.favorites__grid--card--image-2 {
+  background-image: url(../../images/tshirt--cyan_4_11zon.jpg);
+}
+.favorites__grid--card--image-3 {
+  background-image: url(../../images/tshirt--magenta_5_11zon.jpg);
+}
+.favorites__grid--card--image-4 {
+  background-image: url(../../images/tshirt--orange_6_11zon.jpg);
+}
+.favorites__grid--card:hover > .favorites__grid--card--scale > .favorites__grid--card--image {
+  transform: scale(1.1);
+}
+.favorites__grid--card--word {
+  width: 80%;
+  margin: 1.25rem auto;
+  color: var(--black);
+}
+.favorites__grid--card p {
+  margin: 0.5rem;
+}
+.favorites__grid--card--price {
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+.favorites__grid--card--name {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 62.5rem) {
+  .favorites {
+    width: 93.333vw;
+    margin: auto;
+  }
+  .favorites__grid {
+    grid-template-columns: repeat(4, 25%);
+  }
+  .favorites__grid--card--image {
+    height: 28.0625rem;
+  }
+}
+
+#gift_away {
+  height: 5rem;
+  width: 100%;
+  background-color: var(--black);
+  color: var(--white);
+  line-height: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 3.75rem;
+}
+@media screen and (min-width: 62.5rem) {
+  #gift_away {
+    height: 10vw;
+    line-height: 10vw;
+    font-size: 9.625rem;
+  }
+}
+
+.heading {
+  display: block;
+  height: 7.5625rem;
+  width: 15.625rem;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  line-height: 1.3;
+  margin: 2.8125rem auto 0;
+  font-size: 1.25rem;
+}
+.heading span {
+  font-size: 3rem;
+  font-style: normal;
+  font-family: "Nunito Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.season__grid--card {
+  color: var(--black);
+  width: 20.4375rem;
+  position: relative;
+  display: block;
+  margin: 0 auto 3.125rem;
+}
+.season__grid--card--overflow {
+  overflow: hidden;
+}
+.season__grid--card--image {
+  width: 100%;
+  height: 20.5rem;
+  background: center/cover no-repeat;
+  transition: all 0.5s ease;
+}
+.season__grid--card--image-1 {
+  background-image: url(../../../images/icon/s1.png);
+}
+.season__grid--card--image-2 {
+  background-image: url(../../../images/icon/s2.png);
+}
+.season__grid--card--image-3 {
+  background-image: url(../../../images/icon/s3.png);
+}
+.season__grid--card .arrow_head {
+  transition: all 0.5s ease;
+}
+.season__grid--card:hover .season__grid--card--image {
+  transform: scale(1.1);
+}
+.season__grid--card:hover .arrow_head {
+  color: #012169;
 }
 
 .header__nav--desktop {
@@ -637,6 +768,18 @@ a {
 .header__nav--bar--link:hover:before, .header__favorites-cta--link:hover:before, .header__nav--desktop:hover:before {
   visibility: visible;
   transform: scaleX(1);
+}
+
+.arrow_head:after {
+  position: absolute;
+  transform: translateX(0.625rem);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  transition: all 0.5s ease;
+}
+.arrow:hover .arrow_head::after {
+  transform: translateX(1.25rem);
 }
 
 .shop-cta {

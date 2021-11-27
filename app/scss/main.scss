@@ -38,6 +38,23 @@
     transform: scaleX(1);
   }
 }
+
+.arrow {
+  &_head{
+    &:after{
+      position: absolute;
+      transform: translateX(rem(10));
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: '\f061';
+      transition: all 0.5s ease;
+    }
+  }
+  &:hover .arrow_head::after{
+      transform: translateX(rem(20));
+  }
+}
+
 .shop-cta{
     height: rem(56);
     width: rem(325);
