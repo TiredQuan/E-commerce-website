@@ -1,0 +1,121 @@
+.footer{
+    &__sign-up{
+        margin: rem(40) 8vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h6{
+            font-family: 'Playfair Display', serif;
+            font-size: map-get($font-size, lyon-heading3 );
+        }
+        p{
+            font-size: map-get($font-size, product-name );
+            margin: rem(20) 0;
+        }
+        form{
+            display: flex;
+            align-items: center;
+            &>*{
+                height: rem(54);
+            }
+            input{
+                width: 69.333vw;
+                border: 1px solid var(--black);
+                padding-left:rem(20);
+                font-size: map-get($font-size, paragrath );
+            }
+            button{
+                width: rem(54);
+                border: 1px solid var(--black);
+                color: var(--white);
+                background-color: var(--black);
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        @media screen and (min-width:$desktop) {
+            margin:  0 rem(50);
+            width: rem(384);
+            grid-area: sign;
+            justify-self: end;
+            form{
+                input{
+                    width: rem(325);
+                }
+            }
+        }
+    }
+    &__list{
+        position: relative;
+        margin: 0 8vw;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        &>*{
+            width: rem(150);
+        }
+        h6{
+            font-size: map-get($font-size, lyon-heading1 );
+            font-weight: map-get($font-weights, semi-bold );
+            text-transform: uppercase;
+        }
+        a{
+            color: var(--black);
+        }
+        &--help{
+            &--link{
+                &--link{
+                    font-size: rem(28);
+                    margin-right: rem(10);
+                }
+            }
+        }
+        @media screen and (min-width:$desktop) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            margin: 0 rem(50);
+            grid-area: links;
+        }
+    }
+    &__policy{
+        border-top: 1px solid var(--black);
+        grid-area: policy;
+        padding: 8vw;
+        p{
+            font-size: map-get($font-size, product-name );
+            font-weight: map-get($font-weights, semi-bold );
+            a{
+                color: var(--black);
+            }
+        }
+        &--link{
+            margin: rem(15) 0;
+        }
+        &--copyright{
+            text-align: center;
+            margin: rem(40) 0;
+        }
+        @media screen and (min-width:$desktop) {
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            p{
+                margin: rem(25) rem(15);
+            }
+            &--copyright{
+                padding-right:rem(40);
+            }
+        }
+    }
+    @media screen and (min-width:$desktop) {
+        margin: rem(40) 0;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: rem(300) rem(120);
+        grid-template-areas: 
+        "links sign"
+        "policy policy";
+    }
+}
