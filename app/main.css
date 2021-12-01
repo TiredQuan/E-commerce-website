@@ -886,6 +886,7 @@ a {
   }
   .user-exp h5 {
     width: 9.375rem;
+<<<<<<< HEAD
   }
 }
 
@@ -1006,7 +1007,76 @@ a {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 18.75rem 7.5rem;
     grid-template-areas: "links sign" "policy policy";
+=======
+>>>>>>> 1ef5585439d80cc3e243a5ff041688f7a528baa0
   }
+}
+
+.footer__sign-up {
+  margin: 2.5rem 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer__sign-up h6 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.25rem;
+}
+.footer__sign-up p {
+  font-size: 0.875rem;
+  margin: 1.25rem 0;
+}
+.footer__sign-up form {
+  display: flex;
+  align-items: center;
+}
+.footer__sign-up form > * {
+  height: 3.375rem;
+}
+.footer__sign-up form input {
+  width: 69.333vw;
+  border: 1px solid var(--black);
+  padding-left: 1.25rem;
+  font-size: 1rem;
+}
+.footer__sign-up form button {
+  width: 3.375rem;
+  border: 1px solid var(--black);
+  color: var(--white);
+  background-color: var(--black);
+}
+.footer__sign-up form button:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 62.5rem) {
+  .footer__sign-up {
+    margin: 2.5rem 0;
+    width: 24rem;
+  }
+  .footer__sign-up form input {
+    width: 20.3125rem;
+  }
+}
+.footer__list {
+  margin: 0 8vw;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__list > * {
+  width: 50%;
+}
+.footer__list h6 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.footer__list a {
+  color: var(--black);
+}
+.footer__list--help--link--link {
+  font-size: 1.75rem;
+  margin-right: 0.625rem;
 }
 
 .header__nav--desktop {

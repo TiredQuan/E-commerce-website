@@ -35,10 +35,15 @@
             }
         }
         @media screen and (min-width:$desktop) {
+<<<<<<< HEAD
             margin:  0 rem(50);
             width: rem(384);
             grid-area: sign;
             justify-self: end;
+=======
+            margin: rem(40) 0;
+            width: rem(384);
+>>>>>>> 1ef5585439d80cc3e243a5ff041688f7a528baa0
             form{
                 input{
                     width: rem(325);
@@ -47,6 +52,7 @@
         }
     }
     &__list{
+<<<<<<< HEAD
         position: relative;
         margin: 0 8vw;
         display: grid;
@@ -54,6 +60,14 @@
         grid-template-columns: 1fr 1fr;
         &>*{
             width: rem(150);
+=======
+        margin: 0 8vw;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        &>*{
+            width: 50%;
+>>>>>>> 1ef5585439d80cc3e243a5ff041688f7a528baa0
         }
         h6{
             font-size: map-get($font-size, lyon-heading1 );
@@ -71,6 +85,7 @@
                 }
             }
         }
+<<<<<<< HEAD
         @media screen and (min-width:$desktop) {
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr;
@@ -117,5 +132,7 @@
         grid-template-areas: 
         "links sign"
         "policy policy";
+=======
+>>>>>>> 1ef5585439d80cc3e243a5ff041688f7a528baa0
     }
 }
